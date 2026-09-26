@@ -7,6 +7,7 @@ import sys
 import anthropic
 from dotenv import load_dotenv
 
+from epsilon_fitness_agent.progress import summarize_progress
 from epsilon_fitness_agent.storage import profiles
 
 load_dotenv()
@@ -25,16 +26,29 @@ You help with:
 The current user's profile:
 {profile_json}
 
-Tailor every recommendation to this profile: respect their goals, equipment access,
-dietary preferences/restrictions, and injuries/limitations. Ask clarifying questions
-when the profile doesn't give you enough to make a safe, specific recommendation."""
+The current user's progress, precomputed locally from their logged history
+(this data is authoritative - trust these numbers over any mental math of
+your own). "total_logged": 0 for a section means they haven't logged anything
+of that type yet - say so plainly rather than inventing history. A few of
+their most recent raw workout/meal entries are included for qualitative
+detail (notes, specific foods/exercises) alongside the computed stats:
+
+{progress_json}
+
+Tailor every recommendation to this profile and progress data: respect their
+goals, equipment access, dietary preferences/restrictions, and injuries/
+limitations. Ask clarifying questions when the profile or progress data
+doesn't give you enough to make a safe, specific recommendation."""
 
 
 def build_system_prompt(user_id: str) -> str:
     profile = profiles.get(user_id)
     if profile is None:
         raise ValueError(f"No profile found for user_id={user_id!r}")
-    return SYSTEM_TEMPLATE.format(profile_json=json.dumps(profile, indent=2))
+    return SYSTEM_TEMPLATE.format(
+        profile_json=json.dumps(profile, indent=2),
+        progress_json=json.dumps(summarize_progress(user_id), indent=2),
+    )
 
 
 def main() -> None:

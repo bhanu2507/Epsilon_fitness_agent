@@ -13,6 +13,7 @@ import anthropic
 from anthropic import beta_tool
 from dotenv import load_dotenv
 
+from epsilon_fitness_agent.gyms import search_nearby_gyms
 from epsilon_fitness_agent.progress import summarize_progress
 from epsilon_fitness_agent.storage import profiles
 
@@ -71,7 +72,24 @@ def build_tools(user_id: str) -> list:
         when asked about progress, trends, or consistency."""
         return json.dumps(summarize_progress(user_id), indent=2)
 
-    return [get_profile, get_progress_summary]
+    @beta_tool
+    def find_nearby_gyms(radius_km: float = 5.0) -> str:
+        """Find gyms and fitness facilities near the current user, using the
+        location on their profile. Returns a JSON list sorted by distance,
+        closest first, with name, address, rating, and open-now status. Call
+        this when asked about nearby gyms or fitness facilities.
+
+        Args:
+            radius_km: Search radius in kilometers (default 5).
+        """
+        profile = profiles.get(user_id)
+        location = (profile or {}).get("location")
+        if not location:
+            return json.dumps({"error": "No location on file for this user."})
+        results = search_nearby_gyms(location["lat"], location["lng"], radius_m=int(radius_km * 1000))
+        return json.dumps(results, indent=2)
+
+    return [get_profile, get_progress_summary, find_nearby_gyms]
 
 
 def run_turn(client: anthropic.Anthropic, messages: list, tools: list, system_prompt: str) -> tuple[str, list]:

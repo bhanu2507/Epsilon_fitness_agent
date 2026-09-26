@@ -13,6 +13,7 @@ import anthropic
 from anthropic import beta_tool
 from dotenv import load_dotenv
 
+from epsilon_fitness_agent.conversations import load_conversation, save_conversation
 from epsilon_fitness_agent.gyms import search_nearby_gyms
 from epsilon_fitness_agent.progress import summarize_progress
 from epsilon_fitness_agent.storage import profiles
@@ -137,9 +138,11 @@ def main() -> None:
     tools = build_tools(user_id)
 
     client = anthropic.Anthropic()
-    messages = []
+    messages = load_conversation(user_id)["messages"]
 
     print(f"Chatting as {user_id}. Type 'exit' to quit.\n")
+    if messages:
+        print(f"(resuming a previous conversation - {len(messages)} messages loaded)\n")
 
     while True:
         try:
@@ -154,6 +157,7 @@ def main() -> None:
         messages.append({"role": "user", "content": user_input})
 
         reply, tool_names_called = run_turn(client, messages, tools, system_prompt)
+        save_conversation(user_id, messages)
 
         for name in tool_names_called:
             print(f"  [tool] {name}")

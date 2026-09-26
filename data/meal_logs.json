@@ -1,0 +1,83 @@
+[
+  {
+    "log_id": "m001",
+    "user_id": "u001",
+    "date": "2026-09-01",
+    "meal_type": "breakfast",
+    "food_items": ["oatmeal", "banana", "almond milk"],
+    "calories": 350,
+    "macros": { "protein_g": 10, "carbs_g": 60, "fat_g": 8 }
+  },
+  {
+    "log_id": "m002",
+    "user_id": "u001",
+    "date": "2026-09-01",
+    "meal_type": "lunch",
+    "food_items": ["lentil salad", "olive oil dressing"],
+    "calories": 420,
+    "macros": { "protein_g": 18, "carbs_g": 50, "fat_g": 14 }
+  },
+  {
+    "log_id": "m003",
+    "user_id": "u001",
+    "date": "2026-09-04",
+    "meal_type": "dinner",
+    "food_items": ["tofu stir fry", "brown rice"],
+    "calories": 500,
+    "macros": { "protein_g": 22, "carbs_g": 65, "fat_g": 12 }
+  },
+  {
+    "log_id": "m004",
+    "user_id": "u002",
+    "date": "2026-09-02",
+    "meal_type": "breakfast",
+    "food_items": ["egg whites", "whole wheat toast", "avocado"],
+    "calories": 480,
+    "macros": { "protein_g": 30, "carbs_g": 40, "fat_g": 18 }
+  },
+  {
+    "log_id": "m005",
+    "user_id": "u002",
+    "date": "2026-09-02",
+    "meal_type": "lunch",
+    "food_items": ["grilled chicken breast", "quinoa", "broccoli"],
+    "calories": 620,
+    "macros": { "protein_g": 50, "carbs_g": 55, "fat_g": 15 }
+  },
+  {
+    "log_id": "m006",
+    "user_id": "u002",
+    "date": "2026-09-05",
+    "meal_type": "dinner",
+    "food_items": ["salmon", "sweet potato", "asparagus"],
+    "calories": 590,
+    "macros": { "protein_g": 45, "carbs_g": 45, "fat_g": 22 }
+  },
+  {
+    "log_id": "m007",
+    "user_id": "u003",
+    "date": "2026-09-03",
+    "meal_type": "breakfast",
+    "food_items": ["rice porridge", "gluten-free crackers"],
+    "calories": 300,
+    "macros": { "protein_g": 6, "carbs_g": 55, "fat_g": 5 }
+  },
+  {
+    "log_id": "m008",
+    "user_id": "u003",
+    "date": "2026-09-03",
+    "meal_type": "lunch",
+    "food_items": ["chickpea salad", "gluten-free flatbread"],
+    "calories": 430,
+    "macros": { "protein_g": 14, "carbs_g": 60, "fat_g": 12 }
+  },
+  {
+    "log_id": "m009",
+    "user_id": "u003",
+    "date": "2026-09-07",
+    "meal_type": "dinner",
+    "food_items": ["vegetable curry", "rice noodles"],
+    "calories": 460,
+    "macros": { "protein_g": 10, "carbs_g": 70, "fat_g": 14 }
+  }
+]

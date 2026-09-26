@@ -1,0 +1,115 @@
+[
+  {
+    "log_id": "w001",
+    "user_id": "u001",
+    "date": "2026-09-01",
+    "workout_type": "strength",
+    "exercises": [
+      { "name": "Goblet Squat", "sets": 3, "reps": 12, "weight_kg": 12 },
+      { "name": "Dumbbell Row", "sets": 3, "reps": 10, "weight_kg": 10 }
+    ],
+    "duration_minutes": 40,
+    "calories_burned": 220,
+    "notes": "Felt good, no knee issues"
+  },
+  {
+    "log_id": "w002",
+    "user_id": "u001",
+    "date": "2026-09-04",
+    "workout_type": "cardio",
+    "exercises": [
+      { "name": "Brisk Walk", "sets": 1, "reps": null, "weight_kg": null }
+    ],
+    "duration_minutes": 30,
+    "calories_burned": 180,
+    "notes": "Outdoor walk"
+  },
+  {
+    "log_id": "w003",
+    "user_id": "u001",
+    "date": "2026-09-08",
+    "workout_type": "strength",
+    "exercises": [
+      { "name": "Goblet Squat", "sets": 3, "reps": 12, "weight_kg": 14 },
+      { "name": "Resistance Band Row", "sets": 3, "reps": 12, "weight_kg": null }
+    ],
+    "duration_minutes": 45,
+    "calories_burned": 240,
+    "notes": "Increased squat weight"
+  },
+  {
+    "log_id": "w004",
+    "user_id": "u002",
+    "date": "2026-09-02",
+    "workout_type": "strength",
+    "exercises": [
+      { "name": "Barbell Squat", "sets": 4, "reps": 8, "weight_kg": 80 },
+      { "name": "Bench Press", "sets": 4, "reps": 8, "weight_kg": 70 }
+    ],
+    "duration_minutes": 60,
+    "calories_burned": 400,
+    "notes": "Lower back felt tight during squats"
+  },
+  {
+    "log_id": "w005",
+    "user_id": "u002",
+    "date": "2026-09-05",
+    "workout_type": "strength",
+    "exercises": [
+      { "name": "Deadlift", "sets": 3, "reps": 5, "weight_kg": 100 },
+      { "name": "Pull-up", "sets": 4, "reps": 6, "weight_kg": null }
+    ],
+    "duration_minutes": 55,
+    "calories_burned": 380,
+    "notes": "PR on deadlift"
+  },
+  {
+    "log_id": "w006",
+    "user_id": "u002",
+    "date": "2026-09-09",
+    "workout_type": "strength",
+    "exercises": [
+      { "name": "Barbell Squat", "sets": 4, "reps": 8, "weight_kg": 85 },
+      { "name": "Overhead Press", "sets": 3, "reps": 8, "weight_kg": 40 }
+    ],
+    "duration_minutes": 60,
+    "calories_burned": 410,
+    "notes": "No back pain today"
+  },
+  {
+    "log_id": "w007",
+    "user_id": "u003",
+    "date": "2026-09-03",
+    "workout_type": "mobility",
+    "exercises": [
+      { "name": "Chair Yoga", "sets": 1, "reps": null, "weight_kg": null }
+    ],
+    "duration_minutes": 25,
+    "calories_burned": 90,
+    "notes": "Gentle, easy on knees"
+  },
+  {
+    "log_id": "w008",
+    "user_id": "u003",
+    "date": "2026-09-07",
+    "workout_type": "cardio",
+    "exercises": [
+      { "name": "Stationary Bike", "sets": 1, "reps": null, "weight_kg": null }
+    ],
+    "duration_minutes": 20,
+    "calories_burned": 140,
+    "notes": "Low resistance, knee felt fine"
+  },
+  {
+    "log_id": "w009",
+    "user_id": "u003",
+    "date": "2026-09-11",
+    "workout_type": "mobility",
+    "exercises": [
+      { "name": "Chair Yoga", "sets": 1, "reps": null, "weight_kg": null }
+    ],
+    "duration_minutes": 30,
+    "calories_burned": 100,
+    "notes": "Increased duration"
+  }
+]

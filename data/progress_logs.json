@@ -1,0 +1,74 @@
+[
+  {
+    "log_id": "p001",
+    "user_id": "u001",
+    "date": "2026-09-01",
+    "weight_kg": 62.0,
+    "body_fat_pct": 26.5,
+    "measurements": { "waist_cm": 74, "chest_cm": 90 }
+  },
+  {
+    "log_id": "p002",
+    "user_id": "u001",
+    "date": "2026-09-08",
+    "weight_kg": 61.4,
+    "body_fat_pct": 26.0,
+    "measurements": { "waist_cm": 73, "chest_cm": 90 }
+  },
+  {
+    "log_id": "p003",
+    "user_id": "u001",
+    "date": "2026-09-15",
+    "weight_kg": 61.0,
+    "body_fat_pct": 25.6,
+    "measurements": { "waist_cm": 72.5, "chest_cm": 89.5 }
+  },
+  {
+    "log_id": "p004",
+    "user_id": "u002",
+    "date": "2026-09-02",
+    "weight_kg": 85.0,
+    "body_fat_pct": 18.0,
+    "measurements": { "waist_cm": 88, "chest_cm": 105 }
+  },
+  {
+    "log_id": "p005",
+    "user_id": "u002",
+    "date": "2026-09-09",
+    "weight_kg": 85.6,
+    "body_fat_pct": 17.6,
+    "measurements": { "waist_cm": 87.5, "chest_cm": 106 }
+  },
+  {
+    "log_id": "p006",
+    "user_id": "u002",
+    "date": "2026-09-16",
+    "weight_kg": 86.2,
+    "body_fat_pct": 17.3,
+    "measurements": { "waist_cm": 87, "chest_cm": 107 }
+  },
+  {
+    "log_id": "p007",
+    "user_id": "u003",
+    "date": "2026-09-03",
+    "weight_kg": 70.0,
+    "body_fat_pct": 32.0,
+    "measurements": { "waist_cm": 85, "chest_cm": 95 }
+  },
+  {
+    "log_id": "p008",
+    "user_id": "u003",
+    "date": "2026-09-10",
+    "weight_kg": 69.5,
+    "body_fat_pct": 31.6,
+    "measurements": { "waist_cm": 84.5, "chest_cm": 95 }
+  },
+  {
+    "log_id": "p009",
+    "user_id": "u003",
+    "date": "2026-09-17",
+    "weight_kg": 69.1,
+    "body_fat_pct": 31.2,
+    "measurements": { "waist_cm": 84, "chest_cm": 94.5 }
+  }
+]
